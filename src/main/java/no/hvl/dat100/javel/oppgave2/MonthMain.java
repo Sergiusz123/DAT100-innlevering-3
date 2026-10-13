@@ -25,5 +25,19 @@ public class MonthMain {
          Remember to also to check that you get the expected results
          */
 
+        //Oppgave 2 a)
+        
+        //Oppgave 2 b)
+
+        //Oppgave 2 c)
+
+        //Oppgave 2 d)
+
+        //Oppgave 2 e)
+
+        //Oppgave 2 f)
+
+        //Oppgave 2 g)
+
     }
 }
