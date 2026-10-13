@@ -58,7 +58,15 @@ public class MonthlyPower {
 
         double support = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++){
+            for(int j = 0; j < usage[i].length; j++){
+                double pris = usage[i][j] * prices[i][j];
+                double utenStottePris = pris - 0.9625;
+                double stotte = utenStottePris * 0.9;
+                
+                support += stotte;
+            }
+        }
 
         return support;
     }

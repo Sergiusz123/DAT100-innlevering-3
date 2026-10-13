@@ -30,13 +30,14 @@ public class MonthMain {
         //Oppgave 2 b)
 
         //Oppgave 2 c)
-        
+        System.out.println(MonthlyPower.computePowerUsage(power_usage_month));
 
         //Oppgave 2 d)
 
         //Oppgave 2 e)
 
         //Oppgave 2 f)
+        System.out.println(MonthlyPower.computePowerSupport(power_usage_month, power_prices_month));
 
         //Oppgave 2 g)
 
