@@ -18,7 +18,15 @@ public class Customers {
 
         int count = 0;
 
+<<<<<<< Updated upstream
         
+=======
+        for(Customer customer : customers){
+            if(customer != null){
+                count++;
+            }
+        }
+>>>>>>> Stashed changes
 
         return count;
     }
@@ -45,8 +53,15 @@ public class Customers {
     public boolean addCustomer(Customer c) {
 
         boolean inserted = false;
+        int i = 0;
 
-        // TODO
+        while(!inserted && customers.length > i){
+            if(customers[i] == null){
+                customers[i] = c;
+                inserted = true;
+            }
+            i++;
+        }
 
         return inserted;
     }
