@@ -28,6 +28,8 @@ public class MonthMain {
         //Oppgave 2 a)
         
         //Oppgave 2 b)
+        MonthlyPower.print_PowerPrices(power_prices_month);
+        System.out.println();
 
         //Oppgave 2 c)
         System.out.println(MonthlyPower.computePowerUsage(power_usage_month));
@@ -35,6 +37,7 @@ public class MonthMain {
         //Oppgave 2 d)
 
         //Oppgave 2 e)
+        System.out.printf("%.2f kr%n", MonthlyPower.computeSpotPrice(power_usage_month, power_prices_month));
 
         //Oppgave 2 f)
         System.out.println(MonthlyPower.computePowerSupport(power_usage_month, power_prices_month));
