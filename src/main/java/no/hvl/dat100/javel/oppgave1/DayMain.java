@@ -26,5 +26,14 @@ public class DayMain {
 
         // Oppgave 1 b)
         DailyPower.printPowerUsage(DayPowerData.powerusage_day);
+
+        // Oppgave 1 c)
+        DailyPower.computePowerUsage(powerusage_day);
+
+        // Oppgave 1 f)
+        DailyPower.computePowerSupport(powerusage_day, powerprices_day);
+
+        // Oppgave 1 i)
+        DailyPower.findAvgPower(powerusage_day);
     }
 }

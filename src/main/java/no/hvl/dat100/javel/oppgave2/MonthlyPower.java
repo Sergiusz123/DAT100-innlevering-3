@@ -23,7 +23,11 @@ public class MonthlyPower {
 
         double sum = 0;
 
-        // TODO
+        for(double[] powerDay : usage){
+            for(double power : powerDay){
+                sum += power;
+            }
+        }
 
         return sum;
     }
