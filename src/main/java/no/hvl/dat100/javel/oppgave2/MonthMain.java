@@ -30,6 +30,7 @@ public class MonthMain {
         //Oppgave 2 b)
 
         //Oppgave 2 c)
+        
 
         //Oppgave 2 d)
 

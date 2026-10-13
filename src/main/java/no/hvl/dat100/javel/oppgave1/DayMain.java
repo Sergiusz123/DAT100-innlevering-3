@@ -28,15 +28,15 @@ public class DayMain {
         DailyPower.printPowerUsage(DayPowerData.powerusage_day);
 
         // Oppgave 1 c)
-        DailyPower.computePowerUsage(powerusage_day);
+        System.out.println("\n" + DailyPower.computePowerUsage(powerusage_day));
 
         // Oppgave 1 f)
-        DailyPower.computePowerSupport(powerusage_day, powerprices_day);
+        System.out.println(DailyPower.computePowerSupport(powerusage_day, powerprices_day));
 
         //Oppgave 1 h)
-        DailyPower.findPeakUsage(powerusage_day);
+        System.out.println(DailyPower.findPeakUsage(powerusage_day));
 
         // Oppgave 1 i)
-        DailyPower.findAvgPower(powerusage_day);
+        System.out.println(DailyPower.findAvgPower(powerusage_day));
     }
 }

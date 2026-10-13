@@ -14,7 +14,7 @@ public class DailyPower {
 
         for (double stromBruk: DayPowerData.powerusage_day) {
 
-            System.out.print(stromBruk + " kWh, ");
+            System.out.print(stromBruk + " kWh ");
         }
     }
 
