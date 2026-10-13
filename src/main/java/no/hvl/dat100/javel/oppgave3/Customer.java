@@ -41,6 +41,11 @@ public class Customer {
         this.agreement = agreement;
     }
 
+    public String toString(){
+        String text = ("Customer number " + customer_id + "\n Name " + name + "\n Email " + email + "\n Agreement " + agreement);
+        return text;
+    }
+
     // TODO - toString method
 
 }

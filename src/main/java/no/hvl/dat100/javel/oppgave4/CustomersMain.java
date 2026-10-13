@@ -1,7 +1,6 @@
 package no.hvl.dat100.javel.oppgave4;
 
-import no.hvl.dat100.javel.oppgave3.Customer;
-import no.hvl.dat100.javel.oppgave3.PowerAgreementType;
+import no.hvl.dat100.javel.oppgave4.Customers;
 
 public class CustomersMain {
 
