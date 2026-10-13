@@ -12,8 +12,10 @@ public class DailyPower {
     // b) print power usage during a day
     public static void printPowerUsage(double[] usage) {
 
-        // TODO
+        for (double stromBruk: DayPowerData.powerusage_day) {
 
+            System.out.print(stromBruk + " kWh, ");
+        }
     }
 
     // c) compute power usage for a single day
@@ -45,8 +47,13 @@ public class DailyPower {
     private static double getSupport(double usage, double price) {
 
         double support = 0;
+        double prisOver = 0;
 
-        // TODO
+        if (price > THRESHOLD) {
+            prisOver = price - THRESHOLD;
+        }
+
+        support = prisOver * PERCENTAGE * usage;
 
         return support;
     }
@@ -67,9 +74,9 @@ public class DailyPower {
         return support;
     }
 
+    // g) compute norges pris for a single day
     private static final double NORGESPRIS_KWH = 0.5;
 
-    // g) compute norges pris for a single day
     public static double computeNorgesPrice(double[] usage) {
 
         double price = 0;
@@ -79,17 +86,22 @@ public class DailyPower {
         return price;
     }
 
-    // g) compute peak usage during a single day
+    // h) compute peak usage during a single day
     public static double findPeakUsage(double[] usage) {
 
-        double temp_max = 0;
+        double temp_max = usage[0];
 
-        // TODO
+        for (int i = 0; i < usage.length; i++) {
+
+            if (temp_max < usage[i]) {
+                temp_max = usage[i];
+            }
+        }
 
         return temp_max;
     }
 
-
+    // i) 
     public static double findAvgPower(double[] usage) {
 
         double average = 0;

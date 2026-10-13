@@ -24,5 +24,7 @@ public class DayMain {
          Remember to also to check that you get the expected results
          */
 
+        // Oppgave 1 b)
+        DailyPower.printPowerUsage(DayPowerData.powerusage_day);
     }
 }
