@@ -21,7 +21,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for(double power : usage){
+            sum += power;
+        }
 
         return sum;
     }
@@ -54,7 +56,13 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++){
+            double pris = usage[i] * prices[i];
+            double utenStottePris = pris - 0.9625;
+            double stotte = utenStottePris * 0.9;
+            
+            support += stotte;
+        }
 
         return support;
     }
@@ -81,11 +89,16 @@ public class DailyPower {
         return temp_max;
     }
 
+
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
+        double sum = 0;
 
-        // TODO
+        for(double power : usage){
+            sum += power;
+        }
+        average = sum / usage.length;
 
         return average;
     }
