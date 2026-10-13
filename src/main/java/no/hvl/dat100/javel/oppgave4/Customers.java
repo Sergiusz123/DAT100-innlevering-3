@@ -18,15 +18,11 @@ public class Customers {
 
         int count = 0;
 
-<<<<<<< Updated upstream
-        
-=======
         for(Customer customer : customers){
             if(customer != null){
                 count++;
             }
         }
->>>>>>> Stashed changes
 
         return count;
     }
