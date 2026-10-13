@@ -26,7 +26,6 @@ public class Customers {
     // c) return reference to customer with given id (if exists)
     public Customer getCustomer(int customer_id) {
 
-        boolean funnet = false;
         Customer c = null;
 
         for (Customer kunde : customers) {
