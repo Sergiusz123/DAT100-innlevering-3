@@ -1,6 +1,5 @@
 package no.hvl.dat100.javel.oppgave4;
 
-import no.hvl.dat100.javel.oppgave4.Customers;
 import no.hvl.dat100.javel.oppgave3.Customer;
 import no.hvl.dat100.javel.oppgave3.PowerAgreementType;
 
@@ -45,7 +44,8 @@ public class CustomersMain {
         System.out.println();
 
         // e)
-        customer.removeCustomer(person4.getCustomer_id());
+        System.out.println("Kunde slettet: " + customer.removeCustomer(person4.getCustomer_id()));
+        
 
         // f)
             System.out.println("Hele lista: ");
