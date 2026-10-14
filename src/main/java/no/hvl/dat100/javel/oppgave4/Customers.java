@@ -83,9 +83,26 @@ public class Customers {
 
     // f) return reference table with all customers
     public Customer[] getCustomers() {
+    
+        int counter = 0;
 
-        for (Customer kunde : customers){}
+        for (int i =0; i< customers.length; i++){
+            if (customers[i] != null){
+                counter++;
 
-        return customers;
+            }
+        }
+
+        Customer[] customersV2 = new Customer[counter];
+
+                for (int i =0; i< customers.length; i++){
+            if (customers[i] != null){
+                int newcustomerslength = counter - i;
+                customersV2[i] = customers[newcustomerslength];
+                
+            }
+        }
+
+        return customersV2;
     }
 }

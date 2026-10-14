@@ -3,22 +3,11 @@ package no.hvl.dat100.javel.oppgave1;
 public class DailyPower {
 
     // a) print power prices during a day
-    public static void print_PowerUsage(double[][] usage) {
+    public static void printPowerPrices(double[] prices) {
 
-        double prisdag = 0;
-        double prismaaned = 0;
-        for ( int i = 0; i<usage.length; i++){
-            for(int j = 0; j < usage[i].length; j++){
-                prisdag += usage[i][j];
-            }
-            System.out.printf(" Dag %d: %.2f NOK%n ", i, prisdag);
-            prismaaned += prisdag;
-            prisdag = 0;
-            System.out.println("\n");
+        for ( int i=0; i<prices.length;i++){
+            System.out.printf("\n%.2f NOK ", prices[i]);
         }
-        
-        System.out.printf("Pris for hele måneden: %.2f NOK ", prismaaned);
-
     }
 
     // b) print power usage during a day
@@ -43,25 +32,16 @@ public class DailyPower {
     }
 
     // d) compute spot price for a single day
-    public static boolean exceedThreshold(double[][] powerusage, double threshold) {
+    public static double computeSpotPrice(double[] usage, double[] prices) {
 
-        boolean exceeded = false;
-        double usage = 0;
+        double price = 0;
 
-        int i = 0;
+        for (int i = 0; i < usage.length; i++){
 
-        while ( exceeded == false && i< powerusage.length){
-            for( int j = 0; j<powerusage[i].length; j++){
-                usage += powerusage[i][j];
-                System.out.printf("%.2f kWh",usage);
-                System.out.println();
-            }
-
-            if ( usage > threshold ){
-                exceeded = true;
+            price += prices[i]*usage[i];
         }
-            i++;
-    }
+
+        return price;
     }
     // e) compute power support for a given usage and price
     private static final double THRESHOLD = 0.9375;
@@ -104,7 +84,9 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for ( int i = 0; i<usage.length; i++) {
+            price += usage[i] * NORGESPRIS_KWH; 
+        }
 
         return price;
     }
