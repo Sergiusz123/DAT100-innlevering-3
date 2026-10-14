@@ -14,7 +14,7 @@ public class Invoice {
 
     private double amount; // power price for this month
 
-
+    // a)
     public Invoice(Customer c, String month, double[][] usage, double[][] power_prices) {
 
         this.c = c;
@@ -24,6 +24,7 @@ public class Invoice {
         this.amount = 0;
     }
 
+    // b) Feil (Metoden skal ta hensyn til hvilken strømavtale kunder har)
     public void computeAmount() {
 
         this.amount = 0;
@@ -37,6 +38,7 @@ public class Invoice {
         }
     }
 
+    // c)
     public void printInvoice() {
 
         double totalUsage = 0;

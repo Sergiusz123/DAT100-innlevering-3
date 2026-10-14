@@ -13,19 +13,22 @@ public class InvoiceMain {
         System.out.println("==============");
         System.out.println();
 
-        Customer kunde = new Customer("Ola Badil", 
-        "olabadil@gmial.com",
-        1005,
-        PowerAgreementType.SPOTPRICE);
+        Customer kunde1 = new Customer("Ola Badil", "olabadil@gmail.com", 1005, PowerAgreementType.SPOTPRICE);
+        Invoice faktura1 = new Invoice(kunde1, "Januar", CustomerPowerUsageData.usage_month_customer1, MonthPowerData.powerprices_month);
 
-        Invoice faktura = new Invoice(kunde,
-        "Januar", 
-        CustomerPowerUsageData.usage_month_customer1, 
-        MonthPowerData.powerprices_month);
+        Customer kunde2 = new Customer("Kari Hansen", "karihansen@gmail.com", 1006, PowerAgreementType.NORGESPRICE);
+        Invoice faktura2 = new Invoice(kunde2, "Februar", CustomerPowerUsageData.usage_month_customer2, MonthPowerData.powerprices_month);
 
-        faktura.computeAmount();
-        faktura.printInvoice();
+        Customer kunde3 = new Customer("Per Lunde", "perlunde@gmail.com", 1007, PowerAgreementType.POWERSUPPORT);
+        Invoice faktura3 = new Invoice(kunde3, "Mars", CustomerPowerUsageData.usage_month_customer3, MonthPowerData.powerprices_month);
+        // b)
+        faktura1.computeAmount();
 
+        // c)
+        faktura1.printInvoice();
+
+        // d)
+        processInvoices();
         
     }
 

@@ -2,6 +2,7 @@ package no.hvl.dat100.javel.oppgave5;
 
 public class Invoices {
 
+    // d)
     public static void processInvoices(Invoice[] invoices) {
 
         for (int i = 0; i < invoices.length; i++) {
