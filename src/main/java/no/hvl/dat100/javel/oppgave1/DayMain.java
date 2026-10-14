@@ -19,6 +19,7 @@ public class DayMain {
         //oppgave 1 a)
         System.out.print("oppgave a ");
         DailyPower.printPowerPrices(powerprices_day);
+
         // Oppgave 1 b)
         DailyPower.printPowerUsage(DayPowerData.powerusage_day);
 

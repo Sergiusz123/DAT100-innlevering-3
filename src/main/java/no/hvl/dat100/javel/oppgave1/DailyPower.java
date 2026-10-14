@@ -48,7 +48,6 @@ public class DailyPower {
     private static final double PERCENTAGE = 0.9;
 
     private static double getSupport(double usage, double price) {
-
         double support = 0;
         double prisOver = 0;
 
@@ -63,7 +62,6 @@ public class DailyPower {
 
     // f) compute power support for a single day
     public static double computePowerSupport(double[] usage, double[] prices) {
-
         double support = 0;
 
         for(int i = 0; i < usage.length; i++){
