@@ -67,8 +67,16 @@ public class Customers {
 
         boolean deleted = false;
         Customer c = null;
+        int i = 0;
 
-        // TODO
+        for (Customer kunde:customers) {
+            if ( kunde.getCustomer_id() ==  customer_id && kunde != null) {
+                c = kunde;
+                customers[i] = null;
+                deleted = true;
+            }
+            i += 1;
+        }
 
         return c;
     }
@@ -76,9 +84,7 @@ public class Customers {
     // f) return reference table with all customers
     public Customer[] getCustomers() {
 
-        Customer[] customers = null;
-
-        // TODO
+        for (Customer kunde : customers){}
 
         return customers;
     }
