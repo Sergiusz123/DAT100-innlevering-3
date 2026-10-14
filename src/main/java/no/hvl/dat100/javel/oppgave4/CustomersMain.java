@@ -1,6 +1,5 @@
 package no.hvl.dat100.javel.oppgave4;
 
-import no.hvl.dat100.javel.oppgave4.Customers;
 import no.hvl.dat100.javel.oppgave3.Customer;
 import no.hvl.dat100.javel.oppgave3.PowerAgreementType;
 

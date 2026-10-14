@@ -63,8 +63,6 @@ public class Customers {
 
     // e) remove customer with given id from reference table
     public Customer removeCustomer(int customer_id) {
-
-        boolean deleted = false;
         Customer c = null;
         int i = 0;
 
@@ -72,7 +70,6 @@ public class Customers {
             if (kunde.getCustomer_id() == customer_id && kunde != null) {
                 c = kunde;
                 customers[i] = null;
-                deleted = true;
             }
             i += 1;
         }
