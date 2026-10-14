@@ -3,9 +3,21 @@ package no.hvl.dat100.javel.oppgave1;
 public class DailyPower {
 
     // a) print power prices during a day
-    public static void printPowerPrices(double[] prices) {
+    public static void print_PowerUsage(double[][] usage) {
 
-        // TODO
+        double prisdag = 0;
+        double prismaaned = 0;
+        for ( int i = 0; i<usage.length; i++){
+            for(int j = 0; j < usage[i].length; j++){
+                prisdag += usage[i][j];
+            }
+            System.out.printf(" Dag %d: %.2f NOK%n ", i, prisdag);
+            prismaaned += prisdag;
+            prisdag = 0;
+            System.out.println("\n");
+        }
+        
+        System.out.printf("Pris for hele måneden: %.2f NOK ", prismaaned);
 
     }
 
@@ -31,15 +43,26 @@ public class DailyPower {
     }
 
     // d) compute spot price for a single day
-    public static double computeSpotPrice(double[] usage, double[] prices) {
+    public static boolean exceedThreshold(double[][] powerusage, double threshold) {
 
-        double price = 0;
+        boolean exceeded = false;
+        double usage = 0;
 
-        // TODO
+        int i = 0;
 
-        return price;
+        while ( exceeded == false && i< powerusage.length){
+            for( int j = 0; j<powerusage[i].length; j++){
+                usage += powerusage[i][j];
+                System.out.printf("%.2f kWh",usage);
+                System.out.println();
+            }
+
+            if ( usage > threshold ){
+                exceeded = true;
+        }
+            i++;
     }
-
+    }
     // e) compute power support for a given usage and price
     private static final double THRESHOLD = 0.9375;
     private static final double PERCENTAGE = 0.9;
