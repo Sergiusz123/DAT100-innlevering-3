@@ -50,6 +50,4 @@ public class Customer {
         return text;
     }
 
-    // TODO - toString method
-
 }

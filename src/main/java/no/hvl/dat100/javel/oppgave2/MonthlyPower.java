@@ -11,13 +11,12 @@ public class MonthlyPower {
             for (int j = 0; j < usage[i].length; j++) {
                 prisdag += usage[i][j];
             }
-            System.out.printf(" Dag %d: %.2f NOK%n ", i, prisdag);
+            System.out.printf(" Dag %d: %.2f KWH%n ", i, prisdag);
             prismaaned += prisdag;
             prisdag = 0;
-            System.out.println("\n");
         }
 
-        System.out.printf("Pris for hele måneden: %.2f NOK ", prismaaned);
+        System.out.printf("Pris for hele måneden: %.2f KWH ", prismaaned);
 
     }
 
@@ -63,8 +62,6 @@ public class MonthlyPower {
         while (exceeded == false && i < powerusage.length) {
             for (int j = 0; j < powerusage[i].length; j++) {
                 usage += powerusage[i][j];
-                System.out.printf("%.2f kWh", usage);
-                System.out.println();
             }
 
             if (usage > threshold) {
@@ -111,20 +108,16 @@ public class MonthlyPower {
 
     // g) Norgesprice for the month
     public static double computeNorgesPrice(double[][] usage) {
-
         double price = 0;
         double dailyPrice = 0;
 
         for (int i = 0; i < usage.length; i++) {
             for (int j = 0; j < usage[i].length; j++) {
                 dailyPrice += usage[i][j] * 0.50;
-
             }
-
             price += dailyPrice;
             dailyPrice = 0;
         }
-
         return price;
     }
 }
