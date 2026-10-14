@@ -27,19 +27,19 @@ public class DayMain {
         System.out.println("\n" + DailyPower.computePowerUsage(powerusage_day));
 
         // oppgave 1 d)
-        System.out.println("oppgave d "+DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
+        System.out.println("\n"+"oppgave d "+DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
 
         // Oppgave 1 f)
-        System.out.println(DailyPower.computePowerSupport(powerusage_day, powerprices_day));
+        System.out.println("\n"+DailyPower.computePowerSupport(powerusage_day, powerprices_day));
 
         //oppgave 1 g)
-        System.out.println("oppgave g "+DailyPower.computeNorgesPrice(powerusage_day));
+        System.out.println("\n"+"oppgave g "+DailyPower.computeNorgesPrice(powerusage_day));
 
         //Oppgave 1 h)
-        System.out.println(DailyPower.findPeakUsage(powerusage_day));
+        System.out.println("\n"+DailyPower.findPeakUsage(powerusage_day));
 
         // Oppgave 1 i)
-        System.out.println(DailyPower.findAvgPower(powerusage_day));
+        System.out.println("\n"+DailyPower.findAvgPower(powerusage_day));
 
     }
 }
