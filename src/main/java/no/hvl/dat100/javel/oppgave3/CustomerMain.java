@@ -1,8 +1,5 @@
 package no.hvl.dat100.javel.oppgave3;
 
-import no.hvl.dat100.javel.oppgave3.Customer;
-import no.hvl.dat100.javel.oppgave3.PowerAgreementType;
-
 public class CustomerMain {
 
     public static void main(String[] args) {
@@ -12,6 +9,7 @@ public class CustomerMain {
         System.out.println("==============");
         System.out.println();
 
+        // e)
         Customer customer1 = new Customer("Bob", "Bob@gamil.com", 1355, PowerAgreementType.POWERSUPPORT);
         customer1.setName("Harry");
         customer1.setEmail("HarryPotter@gamil.com");

@@ -2,11 +2,13 @@ package no.hvl.dat100.javel.oppgave3;
 
 public class Customer {
 
+    // a)
     String name;
     String email;
     int customer_id;
     PowerAgreementType agreement;
 
+    // b)
     public Customer(String name, String email, int customer_id, PowerAgreementType agreement) {
 
         this.name = name;
@@ -15,6 +17,7 @@ public class Customer {
         this.agreement = agreement;
     }
 
+    // c)
     public String getName(){
         return name;
     }
@@ -41,6 +44,7 @@ public class Customer {
         this.agreement = agreement;
     }
 
+    // d)
     public String toString(){
         String text = ("Customer number " + customer_id + "\n Name " + name + "\n Email " + email + "\n Agreement " + agreement);
         return text;
