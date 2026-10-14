@@ -44,7 +44,8 @@ public class CustomersMain {
         System.out.println();
 
         // e)
-        customer.removeCustomer(person4.getCustomer_id());
+        System.out.println("Kunde slettet: " + customer.removeCustomer(person4.getCustomer_id()));
+        
 
         // f)
             System.out.println("Hele lista: ");
