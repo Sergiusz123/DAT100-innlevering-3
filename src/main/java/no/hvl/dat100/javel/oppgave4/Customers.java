@@ -15,11 +15,10 @@ public class Customers {
     // b) count number of non-null references
     public int countNonNull() {
 
-
         int count = 0;
 
-        for(Customer customer : customers){
-            if(customer != null){
+        for (Customer customer : customers) {
+            if (customer != null) {
                 count++;
             }
         }
@@ -35,7 +34,7 @@ public class Customers {
         for (Customer kunde : customers) {
 
             if (kunde != null) {
-                
+
                 if (kunde.getCustomer_id() == customer_id) {
                     return kunde;
                 }
@@ -51,8 +50,8 @@ public class Customers {
         boolean inserted = false;
         int i = 0;
 
-        while(!inserted && customers.length > i){
-            if(customers[i] == null){
+        while (!inserted && customers.length > i) {
+            if (customers[i] == null) {
                 customers[i] = c;
                 inserted = true;
             }
@@ -69,8 +68,8 @@ public class Customers {
         Customer c = null;
         int i = 0;
 
-        for (Customer kunde:customers) {
-            if ( kunde.getCustomer_id() ==  customer_id && kunde != null) {
+        for (Customer kunde : customers) {
+            if (kunde.getCustomer_id() == customer_id && kunde != null) {
                 c = kunde;
                 customers[i] = null;
                 deleted = true;
@@ -83,26 +82,24 @@ public class Customers {
 
     // f) return reference table with all customers
     public Customer[] getCustomers() {
-    
+
         int counter = 0;
 
-        for (int i =0; i< customers.length; i++){
-            if (customers[i] != null){
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
                 counter++;
-
             }
         }
 
         Customer[] customersV2 = new Customer[counter];
 
-                for (int i =0; i< customers.length; i++){
-            if (customers[i] != null){
-                int newcustomerslength = counter - i;
-                customersV2[i] = customers[newcustomerslength];
-                
+        int j = 0;
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
+                customersV2[j] = customers[i];
+                j++;
             }
         }
-
         return customersV2;
     }
 }
