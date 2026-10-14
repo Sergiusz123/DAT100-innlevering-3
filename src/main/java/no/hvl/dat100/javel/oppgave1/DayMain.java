@@ -14,19 +14,17 @@ public class DayMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
-
-         Write code that tests the methods you implement in the DailyPower class
-         Remember to teste the methods as you implement them
-         Remember to also to check that you get the expected results
-         */
+        // Oppgave 1 a)
 
         // Oppgave 1 b)
         DailyPower.printPowerUsage(DayPowerData.powerusage_day);
 
         // Oppgave 1 c)
         System.out.println("\n" + DailyPower.computePowerUsage(powerusage_day));
+
+        // Oppgave 1 d)
+
+        // Oppgave 1 e)
 
         // Oppgave 1 f)
         System.out.println(DailyPower.computePowerSupport(powerusage_day, powerprices_day));
