@@ -1,9 +1,6 @@
 package no.hvl.dat100.javel.oppgave5;
 
 import no.hvl.dat100.javel.oppgave3.Customer;
-import no.hvl.dat100.javel.oppgave2.MonthlyPower;
-
-import java.util.Arrays;
 
 public class Invoice {
 
