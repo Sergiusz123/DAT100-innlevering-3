@@ -58,6 +58,6 @@ public class Invoice {
         c.getAgreement() + "\n" +
         "Måned: " + this.month + "\n" +
         "Forbruk: %.2f kWh\n" +
-        "Beløp: %.2f kr", totalUsage, this.amount);
+        "Beløp: %.2f kr", totalUsage, this.amount,"\n");
     }
 }
