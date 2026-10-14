@@ -21,7 +21,6 @@ public class InvoiceMain {
 
         Customer kunde3 = new Customer("Per Lunde", "perlunde@gmail.com", 1007, PowerAgreementType.POWERSUPPORT);
         Invoice faktura3 = new Invoice(kunde3, "Mars", CustomerPowerUsageData.usage_month_customer3, MonthPowerData.powerprices_month);
-        
         // b)
         faktura1.computeAmount();
 
@@ -29,7 +28,9 @@ public class InvoiceMain {
         faktura1.printInvoice();
 
         // d)
-        processInvoices();
+        System.out.println("\n oppgave 5 d \n");
+        Invoice[] yearInvoices = {faktura1, faktura2, faktura3};
+        Invoices.processInvoices(yearInvoices);
         
     }
 
