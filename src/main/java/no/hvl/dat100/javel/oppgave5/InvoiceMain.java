@@ -25,6 +25,8 @@ public class InvoiceMain {
 
         faktura.computeAmount();
         faktura.printInvoice();
+
+        
     }
 
 }
