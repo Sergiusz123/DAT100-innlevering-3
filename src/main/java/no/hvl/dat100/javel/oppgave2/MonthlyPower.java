@@ -1,7 +1,5 @@
 package no.hvl.dat100.javel.oppgave2;
 
-import no.hvl.dat100.javel.oppgave1.DailyPower;
-
 public class MonthlyPower {
 
     // a) print power usage for a month
@@ -9,8 +7,8 @@ public class MonthlyPower {
 
         double prisdag = 0;
         double prismaaned = 0;
-        for ( int i = 0; i<usage.length; i++){
-            for(int j = 0; j < usage[i].length; j++){
+        for (int i = 0; i < usage.length; i++) {
+            for (int j = 0; j < usage[i].length; j++) {
                 prisdag += usage[i][j];
             }
             System.out.printf(" Dag %d: %.2f NOK%n ", i, prisdag);
@@ -18,7 +16,7 @@ public class MonthlyPower {
             prisdag = 0;
             System.out.println("\n");
         }
-        
+
         System.out.printf("Pris for hele måneden: %.2f NOK ", prismaaned);
 
     }
@@ -28,13 +26,13 @@ public class MonthlyPower {
 
         for (int i = 0; i < prices.length; i++) {
 
-            System.out.print("Dag " + (i+1) + ": ");
+            System.out.print("Dag " + (i + 1) + ": ");
 
             for (int j = 0; j < prices[i].length; j++) {
 
                 System.out.printf("%.2f kr ", prices[i][j]);
             }
-            
+
             System.out.println();
         }
     }
@@ -44,8 +42,8 @@ public class MonthlyPower {
 
         double sum = 0;
 
-        for(double[] powerDay : usage){
-            for(double power : powerDay){
+        for (double[] powerDay : usage) {
+            for (double power : powerDay) {
                 sum += power;
             }
         }
@@ -53,7 +51,8 @@ public class MonthlyPower {
         return sum;
     }
 
-    // d) determine whether a given threshold in powerusage for the month has been exceeded
+    // d) determine whether a given threshold in powerusage for the month has been
+    // exceeded
     public static boolean exceedThreshold(double[][] powerusage, double threshold) {
 
         boolean exceeded = false;
@@ -61,24 +60,19 @@ public class MonthlyPower {
 
         int i = 0;
 
-        while ( exceeded == false && i< powerusage.length){
-            for( int j = 0; j<powerusage[i].length; j++){
+        while (exceeded == false && i < powerusage.length) {
+            for (int j = 0; j < powerusage[i].length; j++) {
                 usage += powerusage[i][j];
-                System.out.printf("%.2f kWh",usage);
+                System.out.printf("%.2f kWh", usage);
                 System.out.println();
             }
 
-            if ( usage > threshold ){
+            if (usage > threshold) {
                 exceeded = true;
-        }
+            }
             i++;
-    }
-     
-        System.out.println();
-        System.out.printf("%.2f kWh",usage);
-        System.out.println();
+        }
         return exceeded;
-    
     }
 
     // e) compute spot price
@@ -102,12 +96,12 @@ public class MonthlyPower {
 
         double support = 0;
 
-        for(int i = 0; i < usage.length; i++){
-            for(int j = 0; j < usage[i].length; j++){
+        for (int i = 0; i < usage.length; i++) {
+            for (int j = 0; j < usage[i].length; j++) {
                 double pris = usage[i][j] * prices[i][j];
                 double utenStottePris = pris - 0.9625;
                 double stotte = utenStottePris * 0.9;
-                
+
                 support += stotte;
             }
         }
@@ -121,8 +115,8 @@ public class MonthlyPower {
         double price = 0;
         double dailyPrice = 0;
 
-        for (int i = 0; i<usage.length;i++){
-            for ( int j = 0; j<usage[i].length;j++){
+        for (int i = 0; i < usage.length; i++) {
+            for (int j = 0; j < usage[i].length; j++) {
                 dailyPrice += usage[i][j] * 0.50;
 
             }
